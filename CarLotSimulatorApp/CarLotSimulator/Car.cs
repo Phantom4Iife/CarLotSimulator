@@ -11,7 +11,10 @@ namespace CarLotSimulator
         public string HonkNoise { get; set; }
         public bool IsDriveable { get; set; }
 
-        public Car() { }
+        public Car()
+        {
+            CarLot.IncrementCarCount();
+        }
 
         public Car(int year, string make, string model, string engineSound, string hornSound, bool driveable)
         {
@@ -21,6 +24,7 @@ namespace CarLotSimulator
             EngineNoise = engineSound;
             HonkNoise = hornSound;
             IsDriveable = driveable;
+            CarLot.IncrementCarCount();
         }
 
         public void StartEngine()

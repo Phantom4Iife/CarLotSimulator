@@ -7,7 +7,7 @@ namespace CarLotSimulator
         static void Main(string[] args)
         {
             CarLot dealership = new CarLot();
-
+            
             Car firstCar = new Car
             {
                 Year = 2015,
@@ -32,8 +32,8 @@ namespace CarLotSimulator
             dealership.CarInventory.Add(secondCar);
             dealership.CarInventory.Add(thirdCar);
 
-            Console.WriteLine("Car Engine and Honk Sounds\n");
-
+            Console.WriteLine("\nCar Engine and Honk Sounds\n");
+            
             firstCar.StartEngine();
             firstCar.HonkHorn();
 
@@ -44,7 +44,7 @@ namespace CarLotSimulator
             thirdCar.HonkHorn();
 
             Console.WriteLine("\nCars in the Dealership\n");
-
+            
             foreach (var car in dealership.CarInventory)
             {
                 Console.WriteLine($"Year: {car.Year}, Make: {car.Make}, Model: {car.Model}");
